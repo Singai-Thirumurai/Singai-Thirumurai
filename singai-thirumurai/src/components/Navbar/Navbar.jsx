@@ -8,9 +8,9 @@ const Navbar = () => {
       <img src={logo} alt="" className='logo'/>
       <ul>
         <li>Home</li>
-        <li>Events</li>
+        <li>Join Us</li>
         <li>About Us</li>
-        <li>Lessons</li>
+        <li>Announcements</li>
         <li>Resources</li>
         <li><button className='btn'>Contact Us</button></li>
       </ul>
