@@ -11,9 +11,10 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <div className="container">
-        <Title subTitle='SINGAPORE THIRUMURAI MAANDU, is a non-profit organisation that propagates the wisdom of Thirumurai.' title='Thirumurai Programs'/>
-        <Events/>
+        <Title subTitle='About Thirumurai' title='SINGAPORE THIRUMURAI MAANDU, is a non-profit organisation that propagates the wisdom of Thirumurai.'/>
         <About/>
+        <Title subTitle='Flagship Events' title='Join Us'/>
+        <Events/>
       </div>
     </div>
   )
