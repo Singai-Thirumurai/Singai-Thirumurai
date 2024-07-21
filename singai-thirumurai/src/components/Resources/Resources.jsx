@@ -2,7 +2,7 @@ import React from 'react'
 import './Resources.css'
 const Resources = () => {
   return (
-    <div className='resources'>
+    <div className='resources' name='resources'>
         <div>
         Resources Section
             <div className='gallery'>
