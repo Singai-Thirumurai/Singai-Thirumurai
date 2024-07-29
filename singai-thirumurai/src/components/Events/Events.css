@@ -46,3 +46,16 @@
     opacity: 1;
     padding: 0;
 }
+
+/* ---- media -----*/
+
+
+@media(max-width: 650px){
+    .events{
+        flex-direction: column;
+    }
+    .event{ 
+        flex-basis: 100%;
+        margin:20px;
+    }
+}

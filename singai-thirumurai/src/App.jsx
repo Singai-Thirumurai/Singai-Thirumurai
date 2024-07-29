@@ -7,7 +7,7 @@ import About from "./components/About/About";
 import Resources from "./components/Resources/Resources";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Annoucements from "./components/Annoucements/Announcements";
+import Annoucements from "./components/Announcements/Announcements";
 
 const App = () => {
   return(
