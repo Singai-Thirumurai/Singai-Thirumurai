@@ -17,7 +17,7 @@ const App = () => {
       <div className="container">
         <Title subTitle='Annoucements' title='Scheduled Events'/>
         <Annoucements/>
-        <Title subTitle='About Thirumurai' title='SINGAPORE THIRUMURAI MAANDU, is a non-profit organisation that propagates the wisdom of Thirumurai.'/>
+        <Title subTitle='About Thirumurai' title='Singapore Thirumurai Manadu, is a non-profit organisation that propagates the wisdom of Thirumurai.'/>
         <About/>
         <Title subTitle='Flagship Events' title='Join Us'/>
         <Events/>
