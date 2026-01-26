@@ -1,39 +1,105 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Events.css'
-import event_1 from '../../assets/program-1.png'
-import event_2 from '../../assets/program-2.png'
-import event_3 from '../../assets/program-3.png'
+import Modal from '../Modal/Modal'
+import event_1 from '../../assets/manadu.jpg'
+import event_2 from '../../assets/competition.jpg'
+import event_3 from '../../assets/thevaaram_class_placeholder.jpg'
 
 import program_icon_1 from '../../assets/program-icon-1.png'
 import program_icon_2 from '../../assets/program-icon-2.png'
 import program_icon_3 from '../../assets/program-icon-3.png'
 
 const Events = () => {
-  return (
-    <div className='events' name='events'>
-        <div className='event'>
-            <img src={event_1} alt=""/>
-            <div className="caption">
-                <img src={program_icon_1} alt=""/>
-                <p>Thirumurai Manadu</p>
+    const [modalType, setModalType] = useState(null); // 'classes' or 'competitions' or 'manadu' or null
+
+    const templeData = [
+        { name: "Sri Arasakesari Sivan Temple", zone: "North/West" },
+        { name: "Holy Tree Sri Punithamaram Balasubramaniar Temple", zone: "North" },
+        { name: "Sri Siva Krishna Temple", zone: "North" },
+        { name: "Darma Muneeswaran Temple", zone: "Central/East" },
+        { name: "Sri Sivan Temple", zone: "East" },
+        { name: "Sri Mariamman Temple (Chinatown)", zone: "Central" },
+        { name: "Sri Senpaga Vinayagar Temple", zone: "East" },
+        { name: "Sri Muneeswaran Temple (Queensway)", zone: "West" },
+        { name: "Sri Ruthrakaliamman Temple", zone: "West" },
+        { name: "Sri Veeramakaliamman Temple", zone: "Central" },
+        { name: "Sri Vadapathira Kaliamman Temple", zone: "Central" },
+        { name: "Sri Layan Sithi Vinayagar Temple", zone: "Central" },
+        { name: "Sri Thendayuthapani Temple", zone: "Central" },
+        { name: "Sri Maha Mariamman temple", zone: "North" },
+        { name: "Sri Velmurugal Gnanamuneeswaran Temple", zone: "North/East" },
+        { name: "Mrs Savithri Karthikeyan c/o Sri Muneeswarar Temple", zone: "West" }
+    ];
+
+    return (
+        <div className='events' name='events'>
+            <div className='event'>
+                <img src={event_1} alt="" />
+                <div className="caption" onClick={() => setModalType('manadu')}>
+                    <img src={program_icon_1} alt="" />
+                    <p>Thirumurai Manadu</p>
+                </div>
             </div>
-        </div>
-        <div className='event'>
-            <img src={event_2} alt=""/>
-            <div className="caption">
-                <img src={program_icon_2} alt=""/>
-                <p>Thirumurai Competitions</p>
+            <div className='event'>
+                <img src={event_2} alt="" />
+                <div className="caption" onClick={() => setModalType('competitions')}>
+                    <img src={program_icon_2} alt="" />
+                    <p>Thirumurai Competitions</p>
+                </div>
             </div>
-        </div>
-        <div className='event'>
-            <img src={event_3} alt=""/>
-            <div className="caption">
-                <img src={program_icon_3} alt=""/>
-                <p>Thirumurai Classes</p>
+            <div className='event'>
+                <img src={event_3} alt="" />
+                <div className="caption" onClick={() => setModalType('classes')}>
+                    <img src={program_icon_3} alt="" />
+                    <p>Thirumurai Classes</p>
+                </div>
             </div>
+
+            <Modal
+                isOpen={modalType === 'manadu'}
+                onClose={() => setModalType(null)}
+                title="Thirumurai Manadu"
+            >
+                <p>This is a yearly event...</p>
+            </Modal>
+
+
+            <Modal
+                isOpen={modalType === 'competitions'}
+                onClose={() => setModalType(null)}
+                title="Thirumurai Competitions"
+            >
+                <p>This is a yearly event where students participate in singing competitons...</p>
+            </Modal>
+
+
+            <Modal
+                isOpen={modalType === 'classes'}
+                onClose={() => setModalType(null)}
+                title="Thirumurai Classes"
+            >
+                <p>Thirumurai Classes happen all over Singapore and is conducted in many temples. These classes are conducted by othuvars and it is usually held on the weekends.</p>
+                <table className='temple-table'>
+                    <thead>
+                        <tr>
+                            <th>Temple Name</th>
+                            <th>Zone</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {templeData.sort((a, b) => a.zone.localeCompare(b.zone)).map((temple, index) => (
+                            <tr key={index}>
+                                <td>{temple.name}</td>
+                                <td>{temple.zone}</td>
+                                <td>Contact for Schedule</td> {/* Placeholder for contact info */}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </Modal>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Events

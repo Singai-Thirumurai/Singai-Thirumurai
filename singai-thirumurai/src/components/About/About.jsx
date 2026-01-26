@@ -1,16 +1,16 @@
 import React from 'react'
 import './About.css'
-import about_img from '../../assets/about.png'
-import play_icon from '../../assets/play-icon.png'
+import about_img from '../../assets/natarajar.jpg'
+// import play_icon from '../../assets/play-icon.png'
 
 const About = () => {
     return (
         <div className='about' name='about'>
-            <div className='about-left'>
-                <img src={about_img} className="about-img" />
-                <img src={play_icon} className="play-icon" />
-            </div>
             <div className='about-right'>
+                <img src={about_img} className="about-img" />
+                {/* <img src={play_icon} className="play-icon" /> */}
+            </div>
+            <div className='about-left'>
                 <h3>ABOUT THIRUMURAI</h3>
                 <p>
                     <p>The Thirumurai is a collection of twelve volumes containing poems and hymns written in praise of the Hindu god Shiva. It's a major work in Tamil literature, dating back from the 6th to the 11th centuries CE.</p>

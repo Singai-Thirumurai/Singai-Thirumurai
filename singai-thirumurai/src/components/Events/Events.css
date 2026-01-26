@@ -25,7 +25,7 @@
     left:0;
     bottom:0;
     right:0;
-    background: rgba(0,15, 152, 0.3);
+    background: rgba(91, 70, 1, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +45,36 @@
 .event:hover .caption {
     opacity: 1;
     padding: 0;
+}
+
+.temple-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #0c0801;
+}
+
+.temple-table th, 
+.temple-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.temple-table thead tr {
+    background-color: #FAB95B;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Zebra striping for better readability */
+.temple-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.temple-table tbody tr:hover {
+    background-color: #f1f1f1;
 }
 
 /* ---- media -----*/
