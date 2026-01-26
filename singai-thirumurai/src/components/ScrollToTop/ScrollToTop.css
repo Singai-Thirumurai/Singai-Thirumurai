@@ -1,0 +1,37 @@
+.back-to-top-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #000F38; /* Matches your theme color */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-top-btn:hover {
+    background-color: #212EA0;
+    transform: scale(1.1);
+}
+
+.back-to-top-btn img {
+    width: 25px;
+    filter: invert(1); /* Turns black icons white */
+}
+
+/* Ensure it stays visible on mobile but doesn't block content */
+@media (max-width: 700px) {
+    .back-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

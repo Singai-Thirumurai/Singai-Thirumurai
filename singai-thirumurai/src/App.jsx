@@ -9,6 +9,8 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Annoucements from "./components/Announcements/Announcements";
 import AboutUs from "./components/AboutUs/AboutUs";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Gallery from "./components/Gallery/Gallery";
 
 const App = () => {
   return(
@@ -18,7 +20,7 @@ const App = () => {
       <div className="container">
         <Title subTitle='Annoucements' title='Scheduled Events'/>
         <Annoucements/>
-        <Title subTitle='About Us' title='Singapore Thirumurai Manadu'/>
+        <Title subTitle='About Us' title='Singapore Thirumurai Manadu Organising Committee'/>
         <AboutUs/>
         <Title title='Thirumurai Overview'/>
         <About/>
@@ -26,8 +28,11 @@ const App = () => {
         <Events/>
         <Title subTitle='Resources' title=''/>
         <Resources/>
+        <Title subTitle='Gallery' title='Event Photos'/>
+        <Gallery />
         <Title subTitle='Contact Us' title='Get in Touch'/>
         <Contact/>
+        <ScrollToTop/>
         <Footer/>
       </div>
     </div>

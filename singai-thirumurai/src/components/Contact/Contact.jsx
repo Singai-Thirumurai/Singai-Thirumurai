@@ -11,7 +11,8 @@ const Contact = () => {
         <h3>Send us a message</h3>
         <p>Feel free to reach out through the contact form or find our contact information below. Your feedback and questions are important to us.</p>
         <ul>
-            <li>Email: sivayanamathirumurai@gmail.com</li>
+            <li>Email: sivayanama.thirumurai@gmail.com</li>
+            <li>Email: thirmuraiyouthwing@gmail.com</li>
             <li>Phone: +65 XXXX XXXX</li>
             <li>Address: Singapore</li>
         </ul>
