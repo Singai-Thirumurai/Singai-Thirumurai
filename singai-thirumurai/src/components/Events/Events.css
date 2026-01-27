@@ -81,6 +81,13 @@
     padding: 0;
 } */
 
+.instagram-icon {
+    width: 50%;
+    height: auto;
+    margin: 0 auto 15px; /* Creates a clean gap between Icon and Text */
+    display: block;
+}
+
 .caption {
     border-radius: 10px;
     position: absolute;

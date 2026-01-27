@@ -1,18 +1,60 @@
-.footer{
-    margin: 10px auto;
+/* Update .footer to handle the new layout */
+.footer {
+    margin: 50px auto;
+    width: 90%;
     display: flex;
+    flex-direction: column; /* Stacks the content nicely */
     align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #797979;
-    padding: 15px 0;
+    justify-content: center;
+    text-align: center;
 }
 
-.footer ul li{
+.footer-content {
+    margin-bottom: 15px;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Individual Icon Styles */
+.social-icon {
+    font-size: 24px; /* Icon size */
+    color: #000F38; /* Default color (matches your theme) */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: Facebook Blue */
+.social-icons a:hover .social-icon {
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Specific Hover Colors */
+.social-icons a:first-child:hover .social-icon {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.social-icons a:last-child:hover .social-icon {
+    color: #E4405F; /* Instagram Pink/Red */
+}
+
+/* Adjust the existing UL for links */
+.footer ul {
+    display: flex;
+    gap: 30px;
     list-style: none;
-    display: inline-block;
-    margin-left: 20px;
+    margin-top: 10px;
+    padding: 0;
 }
 
+.footer ul li {
+    cursor: pointer;
+    font-size: 0.9rem;
+}
 /* ---- media -----*/
 
 @media(max-width: 600px){
