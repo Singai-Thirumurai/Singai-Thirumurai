@@ -147,6 +147,49 @@ const Events = () => {
                 title="Thirumurai Payirchi Kazhagam"
             >
                 <p>This is a yearly event where students participate in singing and theory tests...</p>
+                <p>There are multiple levels to the Payirchi Kazhagam ranging from Level 1 to Level 6.</p>
+                <table className='temple-table'>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Link for booklet</th>
+                            <th>Link for songs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Level 1</td>
+                            <td>Link here</td>
+                            <td>Link here</td>
+                        </tr>
+                        <tr>
+                            <td>Level 2</td>
+                            <td>Link here</td>
+                            <td>Link here</td>
+                        </tr>
+                        <tr>
+                            <td>Level 3</td>
+                            <td>Link here</td>
+                            <td>Link here</td>
+                        </tr>
+                        <tr>
+                            <td>Level 4</td>
+                            <td>Link here</td>
+                            <td>Link here</td>
+                        </tr>
+                        <tr>
+                            <td>Level 5</td>
+                            <td>Link here</td>
+                            <td>Link here</td>
+                        </tr>
+                        <tr>
+                            <td>Level 6</td>
+                            <td>Link here</td>
+                            <td>Link here</td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </Modal>
 
             <Modal
@@ -168,7 +211,7 @@ const Events = () => {
                             <tr key={index}>
                                 <td>{drama.title}</td>
                                 <td>{drama.year}</td>
-                                <td><a href={drama.link} target="_blank" rel="noopener noreferrer">Link here!</a></td> 
+                                <td><a href={drama.link} target="_blank" rel="noopener noreferrer">Link here!</a></td>
                             </tr>
                         ))}
                     </tbody>
@@ -183,7 +226,7 @@ const Events = () => {
             >
                 <p>We are a group of teens and young adults who are passionate about sharing the beauty of Tamil devotional music, knows as thevaram.
                     We also indulge in volunteering programs as team and hope to spread positivity and deep spirituality in youths like us.</p>
-                    <br />
+                <br />
                 <p><strong>We organise Thirumurai Camps (yearly), take part in Sivarathiri, Navarathri and many other events!</strong></p>
                 <br />
                 <p>Join us on our journey to share the beauty of Tamil devotional music and make a positive impact in our community!
