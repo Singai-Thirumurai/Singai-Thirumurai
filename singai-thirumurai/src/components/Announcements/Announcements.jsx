@@ -3,6 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../firebase'; 
 import './Announcements.css';
 import placeholderImg from '../../assets/gallery-1.jpg';
+import NewsTicker from '../NewsTicker/NewsTicker';
 
 const Announcements = () => {
   const [data, setData] = useState([]);
@@ -31,6 +32,9 @@ const Announcements = () => {
 
   return (
     <div className='announcements-section'>
+
+      <NewsTicker />
+
       <div className="filter-tabs">
         <button className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>All Updates</button>
         <button className={filter === 'event' ? 'active' : ''} onClick={() => setFilter('event')}>Upcoming Events</button>
@@ -40,9 +44,7 @@ const Announcements = () => {
 
       <div className="news-grid">
         {filteredData.map((item) => {
-          // CONVERSION LOGIC:
-          // Check if item.date exists and has the .toDate method (is a Firestore Timestamp)
-          // Otherwise, fallback to new Date() just in case it's a string
+
           const dateObj = item.date && item.date.toDate ? item.date.toDate() : new Date(item.date);
           
           return (
@@ -61,7 +63,6 @@ const Announcements = () => {
                 <span className={`tag ${item.type}`}>{item.type}</span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                {/* Optional: Add Time display since you have a timestamp */}
                 <small style={{display:'block', marginTop:'10px', color:'#888'}}>
                   🕒 {dateObj ? dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}
                 </small>

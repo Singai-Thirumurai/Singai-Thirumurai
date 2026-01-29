@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo.png';
 import menu_icon from '../../assets/menu-icon.png'
-import { Link } from "react-scroll";
 import SearchModal from './SearchModal';
 import { FaSearch } from 'react-icons/fa';
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -16,25 +16,52 @@ const Navbar = () => {
     })
   }, []);
 
-  const [mobileMenu, setMobileMenu] = useState(false)
   const toggleMenu = () => {
-    mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+    setMobileMenu(!mobileMenu);
   }
+
+  const scrollToSection = (id, offsetAdjustment = 0) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // This offset accounts for fixed navbar height
+      const headerOffset = 260; 
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset + offsetAdjustment;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      // Optional: Close mobile menu automatically after clicking
+      setMobileMenu(false);
+    }
+  };
 
   return (
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
-      <img src={logo} alt="" className='logo' />
+      <img src={logo} alt="" className='logo' onClick={() => window.scrollTo({top:0, behavior:'smooth'})} style={{cursor:'pointer'}} />
+      
       <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
-        <li><Link to='hero' smooth={true} offset={0} duration={500}>Home</Link></li>
-        <li><Link to='announcements' smooth={true} offset={-260} duration={500}>Announcements</Link></li>
-        <li><Link to='aboutUs' smooth={true} offset={-150} duration={500}>About Us</Link></li>
-        <li><Link to='events' smooth={true} offset={-260} duration={500}>Join Us</Link></li>
-        <li><Link to='resources' smooth={true} offset={-260} duration={500}>Resources</Link></li>
-        <li><Link to='contact' smooth={true} offset={-260} duration={500} className='btn'>Contact Us</Link></li>
+        <li onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Home</li>
+        
+        <li onClick={() => scrollToSection('announcements')}>Announcements</li>
+        
+        <li onClick={() => scrollToSection('about')}>About Us</li>
+        
+        <li onClick={() => scrollToSection('events')}>Join Us</li>
+        
+        <li onClick={() => scrollToSection('resources')}>Resources</li>
+        
+        <li>
+            <button className='btn' onClick={() => scrollToSection('contact')}>Contact Us</button>
+        </li>
+
         <li className="search-trigger" onClick={() => setIsSearchOpen(true)}>
           <FaSearch />
         </li>
       </ul>
+
       <SearchModal
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}

@@ -1,0 +1,81 @@
+.ticker-container {
+    width: 90%; /* Matches your other sections */
+    margin: 0 auto 30px auto; /* Adds space below */
+    background: #000F38; /* Your Brand Dark Blue */
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* The "LATEST NEWS" static label on the left */
+.ticker-label {
+    background: #FAB95B; /* Your Brand Gold/Yellow */
+    color: #000F38;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    z-index: 2; /* Sits on top of the scrolling text */
+    flex-shrink: 0;
+}
+
+.ticker-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* The Animation Logic */
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%; /* Start from off-screen right */
+    animation: scroll-left 20s linear infinite; /* Adjust speed here */
+}
+
+.ticker-item {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 50px; /* Space between repeated messages */
+}
+
+.separator {
+    color: #FAB95B;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Stop scrolling when user hovers to read */
+.ticker-wrapper:hover .ticker-content {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Mobile: Stack it nicely */
+@media (max-width: 600px) {
+    .ticker-label {
+        padding: 0 10px;
+        font-size: 0.8rem;
+    }
+    .ticker-item {
+        font-size: 0.9rem;
+    }
+}
