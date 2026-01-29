@@ -13,27 +13,48 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Gallery from "./components/Gallery/Gallery";
 
 const App = () => {
-  return(
+  return (
     <div>
-      <Navbar/>
-      <Hero/>
+      <Navbar />
+      <Hero />
       <div className="container">
-        <Title subTitle='Annoucements' title='Scheduled Events'/>
-        <Annoucements/>
-        <Title subTitle='About Us' title='Singapore Thirumurai Manadu Organising Committee'/>
-        <AboutUs/>
-        <Title title='Thirumurai Overview'/>
-        <About/>
-        <Title subTitle='Flagship Events' title='Join Us'/>
-        <Events/>
-        <Title subTitle='Resources' title=''/>
-        <Resources/>
-        <Title subTitle='Gallery' title='Event Photos'/>
-        <Gallery />
-        <Title subTitle='Contact Us' title='Get in Touch'/>
-        <Contact/>
-        <ScrollToTop/>
-        <Footer/>
+        <div id="announcements">
+          <Title subTitle='Annoucements' title='Scheduled Events' />
+          <Annoucements />
+        </div>
+
+        <div id="about">
+          <Title subTitle='About Us' title='Singapore Thirumurai Manadu Organising Committee' />
+          <AboutUs />
+        </div>
+
+        <div id="about_thirumurai">
+          <Title title='Thirumurai Overview' />
+          <About />
+        </div>
+
+        <div id="events">
+          <Title subTitle='Flagship Events' title='Join Us' />
+          <Events />
+        </div>
+
+        <div id="resources">
+          <Title subTitle='Resources' title='' />
+          <Resources />
+        </div>
+
+        <div id="gallery">
+          <Title subTitle='Gallery' title='Event Photos' />
+          <Gallery />
+        </div>
+
+        <div id="contact">
+          <Title subTitle='Contact Us' title='Get in Touch' />
+          <Contact />
+        </div>
+
+        <ScrollToTop />
+        <Footer />
       </div>
     </div>
   )

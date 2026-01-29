@@ -32,7 +32,7 @@ const Events = () => {
         { name: "Sri Layan Sithi Vinayagar Temple", zone: "Central" },
         { name: "Sri Thendayuthapani Temple", zone: "Central" },
         { name: "Sri Maha Mariamman Temple", zone: "North" },
-        { name: "Sri Velmurugal Gnanamuneeswaran Temple", zone: "North/East" },
+        { name: "Sri Velmurugan Gnanamuneeswaran Temple", zone: "North/East" },
         { name: "Mrs Savithri Karthikeyan c/o Sri Muneeswarar Temple", zone: "West" }
     ];
 
