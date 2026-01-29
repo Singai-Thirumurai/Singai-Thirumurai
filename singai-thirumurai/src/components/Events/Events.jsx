@@ -37,8 +37,8 @@ const Events = () => {
     ];
 
     const dramaData = [
-        { title: "பித்தா பிறை சூடி", year: 2014, link: "https://www.youtube.com" },
-        { title: "திருநீலகண்டம்", year: 2015, link: "https://www.youtube.com" },
+        { title: "பித்தா பிறை சூடி நாடகம்", year: 2014, link: "https://www.youtube.com" },
+        { title: "திருநீலகண்டம் நாடகம்", year: 2015, link: "https://www.youtube.com" },
         { title: "திலகவதியார் நாடகம்", year: 2016, link: "https://www.youtube.com" },
         { title: "அப்பூதி அடியார் நாடகம்", year: 2017, link: "https://www.youtube.com" },
         { title: "நற்றமிழ் ஞானசம்பந்தர் நாடகம்", year: 2018, link: "https://www.youtube.com" },
