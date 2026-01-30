@@ -1,17 +1,100 @@
-.resources{
-    margin: 80px auto;
+.resources-section {
     width: 90%;
-    text-align: center;
+    margin: 80px auto;
 }
 
-.gallery{
+/* Re-using your existing filter-tabs style from Announcements */
+/* If you put this in index.css, you don't need to repeat it here. */
+.filter-tabs {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
-.btn.dark-btn{
-    background: #212EA0;
-    color: #fff;
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.resource-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #FAB95B; /* Gold Border on Hover */
+}
+
+/* Icon Styling */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.res-icon {
+    font-size: 2.5rem;
+}
+
+.res-icon.pdf { color: #e74c3c; }   /* Red for PDF */
+.res-icon.audio { color: #1e88e5; } /* Blue for Audio */
+
+.res-category {
+    font-size: 0.75rem;
+    font-weight: bold;
+    background: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.resource-card h3 {
+    margin: 0 0 10px 0;
+    color: #000F38;
+    font-size: 1.2rem;
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes button to bottom */
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.download-btn {
+    text-decoration: none;
+    background: #000F38;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-btn:hover {
+    background: #FAB95B; /* Gold hover */
+    color: #000F38;
 }

@@ -1,0 +1,124 @@
+.comp-container {
+    padding: 10px;
+    color: #333;
+}
+
+/* --- PDF HERO SECTION --- */
+.pdf-section {
+    background: #fdf8ec; /* Light cream to match site */
+    border: 2px dashed #FAB95B; /* Gold border */
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pdf-section h3 {
+    color: #000F38;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-download-btn {
+    display: inline-block;
+    background: #e74c3c; /* PDF Red */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+/* --- AUDIO SECTION --- */
+.audio-section h3 {
+    text-align: center;
+    color: #000F38;
+    margin-bottom: 20px;
+}
+
+.audio-section > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* The Grid Layout for Categories */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    border-color: #FAB95B;
+    transform: translateY(-5px);
+}
+
+.category-title {
+    color: #000F38;
+    border-bottom: 2px solid #FAB95B;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Track Buttons */
+.track-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.track-btn {
+    flex: 1 1 40%; /* Makes them share width nicely */
+    background: #f4f6f8;
+    color: #000F38;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.track-btn:hover {
+    background: #000F38;
+    color: #fff;
+}
+
+.play-icon {
+    font-size: 0.8rem;
+}

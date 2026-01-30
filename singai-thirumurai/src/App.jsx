@@ -39,7 +39,7 @@ const App = () => {
         </div>
 
         <div id="resources">
-          <Title subTitle='Resources' title='' />
+          <Title subTitle='Resources' title='Check out the resources!' />
           <Resources />
         </div>
 

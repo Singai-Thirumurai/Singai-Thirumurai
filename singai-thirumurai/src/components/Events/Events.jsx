@@ -14,6 +14,8 @@ import program_icon_4 from '../../assets/program-icon-4.png'
 import program_icon_5 from '../../assets/program-icon-5.png'
 import instagram_icon from '../../assets/instagram_code.png'
 
+import CompetitionDetails from '../CompetitionDetails/CompetitionDetails'
+
 const Events = () => {
     const [modalType, setModalType] = useState(null); // 'classes' or 'competitions' or 'manadu' or 'payirchi-kazhagam' or null
 
@@ -109,9 +111,9 @@ const Events = () => {
             <Modal
                 isOpen={modalType === 'competitions'}
                 onClose={() => setModalType(null)}
-                title="Thirumurai Competitions"
+                title="Thirumurai Competitions 2026"
             >
-                <p>This is a yearly event where students participate in singing competitons...</p>
+                <CompetitionDetails />
             </Modal>
 
 

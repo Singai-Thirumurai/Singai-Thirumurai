@@ -46,7 +46,7 @@
 .ticker-item {
     font-size: 1rem;
     font-weight: 500;
-    margin-right: 50px; /* Space between repeated messages */
+    margin-right: 5px; /* Space between repeated messages */
 }
 
 .separator {
