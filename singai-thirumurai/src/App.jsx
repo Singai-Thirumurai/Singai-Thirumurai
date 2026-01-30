@@ -34,7 +34,7 @@ const App = () => {
         </div>
 
         <div id="events">
-          <Title subTitle='Flagship Events' title='Join Us' />
+          <Title subTitle='Flagship Events' title='Join Us! Click on the cards below to learn more!' />
           <Events />
         </div>
 

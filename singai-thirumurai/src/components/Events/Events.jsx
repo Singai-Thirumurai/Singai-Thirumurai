@@ -4,7 +4,7 @@ import Modal from '../Modal/Modal'
 import event_1 from '../../assets/manadu.jpg'
 import event_2 from '../../assets/competition.jpg'
 import event_3 from '../../assets/thevaaram_class_placeholder.jpg'
-import event_4 from '../../assets/placeholder-img.jpg'
+import event_4 from '../../assets/thirumurai_drama.jpg'
 import event_5 from '../../assets/youthwing.jpg'
 
 import program_icon_1 from '../../assets/program-icon-1.png'

@@ -11,18 +11,18 @@ import './Gallery.css';
 // Import your gallery images
 import img1 from '../../assets/gallery-1.jpg';
 import img2 from '../../assets/gallery-2.jpg';
-import img3 from '../../assets/gallery-3.jpg';
-import img4 from '../../assets/gallery-4.jpg';
-import img5 from '../../assets/gallery-5.jpg';
-import img6 from '../../assets/gallery-6.jpg';
+import img3 from '../../assets/thirumurai_drama.jpg';
+import img4 from '../../assets/thirumurai_youth_wing_manadu_2024.jpg'
+import img5 from '../../assets/thirumurai_camp_2025.jpg';
+import img6 from '../../assets/thirumurai_camp_2024.jpg';
 
 const galleryData = [
-    { img: img1, link: "https://drive.google.com/drive/folders/17QQpAJWBfZjf-db5oK2JVcgf5BSNU6MN?usp=sharing", title: "Thirumurai Manadu 2025", year: "2025" },
-    { img: img2, link: "https://drive.google.com/drive/folders/17QQpAJWBfZjf-db5oK2JVcgf5BSNU6MN?usp=sharing", title: "Thirumurai Manadu 2025", year: "2025" },
-    { img: img3, link: "https://drive.google.com/drive/folders/17QQpAJWBfZjf-db5oK2JVcgf5BSNU6MN?usp=sharing", title: "Thirumurai Manadu 2025", year: "2025" },
-    { img: img4, link: "https://drive.google.com/drive/folders/17QQpAJWBfZjf-db5oK2JVcgf5BSNU6MN?usp=sharing", title: "Thirumurai Manadu 2025", year: "2025" },
-    { img: img5, link: "https://drive.google.com/drive/folders/17QQpAJWBfZjf-db5oK2JVcgf5BSNU6MN?usp=sharing", title: "Thirumurai Manadu 2025", year: "2025" },
-    { img: img6, link: "https://drive.google.com/drive/folders/17QQpAJWBfZjf-db5oK2JVcgf5BSNU6MN?usp=sharing", title: "Thirumurai Manadu 2025", year: "2025" }
+    { img: img1, link: "www.google.com", title: "Thirumurai Manadu 2025", year: "2025" },
+    { img: img2, link: "https://drive.google.com/drive/folders/1OE2iHRY90AoNxSdSs8zpp5lmErPgKekN?usp=sharing", title: "Thirumurai Youth Wing @ Manadu", year: "2025" },
+    { img: img3, link: "https://photos.app.goo.gl/5JWx8DofUrH9czrv9", title: "Thirumurai Drama - Seraman Peruman", year: "2025" },
+    { img: img4, link: "https://drive.google.com/drive/folders/12yF7n8MnGiZgZ4rtXpA26obPmQ7zYFE2?usp=sharing", title: "Thirumurai Youth Wing @ Manadu 2024", year: "2024" },
+    { img: img5, link: "https://drive.google.com/drive/folders/1XnygxZd-QZV3oIur5-xQi2epJ9JrwUwy?usp=sharing", title: "Thirumurai Camp", year: "2025" },
+    { img: img6, link: "https://drive.google.com/drive/folders/1ak9lKrbGvMeExAcWzry3dhADR4KVnYtS?usp=sharing", title: "Thirumurai Camp", year: "2024" }
     // Add more items as needed
 ];
 
