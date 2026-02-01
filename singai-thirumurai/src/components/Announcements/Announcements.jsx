@@ -9,6 +9,13 @@ const Announcements = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState('all');
 
+  const getCategoryName = (key) => {
+    if (key === 'event') return 'Upcoming Events';
+    if (key === 'announcement') return 'Announcements';
+    if (key === 'competition') return 'Competitions';
+    return 'Updates'; // Default for 'all'
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -43,7 +50,10 @@ const Announcements = () => {
       </div>
 
       <div className="news-grid">
-        {filteredData.map((item) => {
+        
+        {filteredData.length === 0 ? ( 
+          <div className='empty-state'><p>There are no new {getCategoryName(filter)} at the moment.</p></div> ) : 
+          (filteredData.map((item) => {
 
           const dateObj = item.date && item.date.toDate ? item.date.toDate() : new Date(item.date);
           
@@ -70,7 +80,7 @@ const Announcements = () => {
               </div>
             </div>
           );
-        })}
+        }))}
       </div>
     </div>
   );

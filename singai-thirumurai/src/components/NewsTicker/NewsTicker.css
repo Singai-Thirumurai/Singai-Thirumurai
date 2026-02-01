@@ -69,13 +69,31 @@
     }
 }
 
-/* Mobile: Stack it nicely */
-@media (max-width: 600px) {
-    .ticker-label {
-        padding: 0 10px;
-        font-size: 0.8rem;
+@media (max-width: 768px) {
+    
+    /* 1. Make the whole bar slimmer and wider */
+    .ticker-container {
+        height: 40px;       /* Reduce height from 50px */
+        width: 95%;         /* Use more screen width */
+        margin-bottom: 20px;
     }
+
+    /* 2. Shrink the Yellow Label */
+    .ticker-label {
+        padding: 0 10px;    /* Reduce padding significantly */
+        font-size: 0.7rem;  /* Make "LATEST NEWS" smaller */
+        gap: 6px;           /* Reduce gap between icon and text */
+        width: auto;        /* Ensure it doesn't force a minimum width */
+    }
+
+    /* 3. Make the scrolling text smaller so it fits better */
     .ticker-item {
+        font-size: 0.85rem; 
+        margin-right: 30px; /* Reduce space between repeated items */
+    }
+    
+    /* 4. (Optional) Adjust the icon size if needed */
+    .ticker-label svg {
         font-size: 0.9rem;
     }
 }

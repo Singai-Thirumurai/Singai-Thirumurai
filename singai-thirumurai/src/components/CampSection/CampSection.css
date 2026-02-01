@@ -1,0 +1,97 @@
+.camp-container {
+    background: #FFF8E7; /* Light Gold/Cream background */
+    padding: 60px 20px;
+    margin-top: 60px;
+    border-top: 4px solid #FAB95B;
+    border-bottom: 4px solid #FAB95B;
+}
+
+.camp-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.camp-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* .camp-video {
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+} */
+
+.camp-badge {
+    background: #000F38;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.camp-text h2 {
+    font-size: 2.5rem;
+    color: #000F38;
+    margin: 15px 0 20px 0;
+}
+
+.camp-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.camp-text ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.camp-btn {
+    background: #FAB95B;
+    color: #000F38;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.camp-btn:hover {
+    background: #000F38;
+    color: #fff;
+}
+
+.camp-video {
+    flex: 1;
+    min-width: 300px;
+    /* Force the container to be a perfect video rectangle */
+    aspect-ratio: 16 / 9; 
+    
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    
+    /* Removes the tiny gap at the bottom of inline elements */
+    line-height: 0; 
+    display: block; 
+}
+
+/* Make the iframe fill the container completely */
+.camp-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

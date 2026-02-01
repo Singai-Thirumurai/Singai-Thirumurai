@@ -13,13 +13,13 @@
     flex-wrap: wrap;
 }
 
-.resources-grid {
+/* .resources-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
-}
+} */
 
-.resource-card {
+/* .resource-card {
     background: white;
     padding: 25px;
     border-radius: 12px;
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
+} */
 
 .resource-card:hover {
     transform: translateY(-5px);
@@ -98,3 +98,61 @@
     background: #FAB95B; /* Gold hover */
     color: #000F38;
 }
+
+.resources-grid {
+    display: grid;
+    /* This ensures columns are equal width */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    align-items: start; /* Prevents cards from stretching weirdly */
+}
+
+.resource-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    /* This helps keep card heights consistent initially */
+    height: 100%; 
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Container for description + read more button */
+.card-desc-container {
+    flex-grow: 1; /* Pushes the Access button to the bottom */
+    margin-bottom: 20px;
+    /* Optional: Enforce a minimum height for alignment */
+    min-height: 100px; 
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* The Read More Button Styling */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #FAB95B; /* Gold color */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+.read-more-btn:hover {
+    color: #000F38; /* Dark Blue on hover */
+}
+
+/* Icon Colors Update (Added YouTube & Link) */
+.res-icon.youtube { color: #FF0000; }
+.res-icon.link { color: #333; }

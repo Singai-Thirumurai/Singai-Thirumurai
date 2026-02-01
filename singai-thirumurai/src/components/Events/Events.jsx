@@ -6,6 +6,7 @@ import event_2 from '../../assets/competition.jpg'
 import event_3 from '../../assets/thevaaram_class_placeholder.jpg'
 import event_4 from '../../assets/thirumurai_drama.jpg'
 import event_5 from '../../assets/youthwing.jpg'
+import event_6 from '../../assets/event_6.jpg'
 
 import program_icon_1 from '../../assets/program-icon-1.png'
 import program_icon_2 from '../../assets/program-icon-2.png'
@@ -39,16 +40,25 @@ const Events = () => {
     ];
 
     const dramaData = [
-        { title: "பித்தா பிறை சூடி நாடகம்", year: 2014, link: "https://www.youtube.com" },
-        { title: "திருநீலகண்டம் நாடகம்", year: 2015, link: "https://www.youtube.com" },
-        { title: "திலகவதியார் நாடகம்", year: 2016, link: "https://www.youtube.com" },
-        { title: "அப்பூதி அடியார் நாடகம்", year: 2017, link: "https://www.youtube.com" },
-        { title: "நற்றமிழ் ஞானசம்பந்தர் நாடகம்", year: 2018, link: "https://www.youtube.com" },
-        { title: "கண்ணப்பர் நாயனார் நாடகம்", year: 2019, link: "https://www.youtube.com" },
-        { title: "திருமுறை கண்ட புராணம் நாடகம்", year: 2022, link: "https://www.youtube.com" },
-        { title: "காரைக்கால் அம்மையார் நாடகம்", year: 2023, link: "https://www.youtube.com" },
-        { title: "மாணிக்கவாசகர் நாடகம்", year: 2024, link: "https://www.youtube.com" },
-        { title: "சேரமான் பெருமாள் நாடகம்", year: 2025, link: "https://www.youtube.com" }
+        { title: "பித்தா பிறை சூடி நாடகம்", year: 2014, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
+        { title: "திருநீலகண்டம் நாடகம்", year: 2015, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
+        { title: "திலகவதியார் நாடகம்", year: 2016, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
+        { title: "அப்பூதி அடியார் நாடகம்", year: 2017, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
+        { title: "நற்றமிழ் ஞானசம்பந்தர் நாடகம்", year: 2018, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
+        { title: "கண்ணப்ப நாயனார் நாடகம்", year: 2019, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
+        { title: "திருமுறை கண்ட புராணம் நாடகம்", year: 2022, link: "https://www.youtube.com/live/ZvNheZuDjdQ?si=5a4vDBOqDMs72pf0" },
+        { title: "காரைக்கால் அம்மையார் நாடகம்", year: 2023, link: "https://www.youtube.com/live/RsEkuNRkkhQ?si=GM9Zd4yFyhsqzJkO" },
+        { title: "மாணிக்கவாசகர் நாடகம்", year: 2024, link: "https://www.youtube.com/live/Jloe3TG2q8Y?si=PvI1crTX99dJHL3l" },
+        { title: "சேரமான் பெருமாள் நாடகம்", year: 2025, link: "https://www.youtube.com/live/e6hI7Brp1BE?si=iwY9FM0EDWsWgUq7" }
+    ];
+
+    const thirumuraiPayirchiKazhagamLevels = [
+        { level: 1, bookletLink: "https://drive.google.com/file/d/1hyF1Il6PVwzdSdUsTpLnLrdlnZP07auY/view?usp=sharing", songsLink: "https://drive.google.com/file/d/11C0rpC4V_68eI8ejRbTuu-8vsWlQy7Go/view?usp=sharing" },
+        { level: 2, bookletLink: "https://drive.google.com/file/d/1xOIhrbeZmxOfD_ns1wXi3gcMwWE1VxWX/view?usp=sharing", songsLink: "https://drive.google.com/file/d/1_8uLyUbLaYsxa8pwtuEbYIr_xsRAz_Cp/view?usp=drive_link"},
+        { level: 3, bookletLink: "https://drive.google.com/file/d/1wLU0aqMjSiS3-kOGnAgfYAK_kVt3Ww67/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1ib5aO1TOp0vKJyU09oIkPeo9xtGnh60s/view?usp=drive_link"},
+        { level: 4, bookletLink: "https://drive.google.com/file/d/168OynFZkybqQZ3kzJyF0KBm97GYPNUNz/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1b6FIy760qNtpe9lpF-S1M4sDKXruszEg/view?usp=drive_link"},
+        { level: 5, bookletLink: "https://drive.google.com/file/d/1L8Kq7sXdZSk9kW1Gk2i2huCfJyar8wCu/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1XPPkALLXYb22ulFJsABMT0tg-kZAZj1X/view?usp=drive_link"},
+        { level: 6, bookletLink: "https://drive.google.com/file/d/1YZpwYOGPe4Xr4XI64C7j4TFjEJTDAAu5/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1_4faDknOi0OPqyRWpnS5bCyki4CtRIZt/view?usp=drive_link"}
     ];
 
     return (
@@ -76,7 +86,7 @@ const Events = () => {
             </div>
 
             <div className='event'>
-                <img src={event_4} alt="" />
+                <img src={event_6} alt="" />
                 <div className="caption" onClick={() => setModalType('payirchi-kazhagam')}>
                     <img src={program_icon_2} alt="" />
                     <p>Thirumurai Payirchi Kazhagam</p>
@@ -104,7 +114,7 @@ const Events = () => {
                 onClose={() => setModalType(null)}
                 title="Thirumurai Manadu"
             >
-                <p>This is a yearly event...</p>
+                <p>வருடம் தோறும் இந்த மாநாடு சைவ சமயக் கொள்கைகளையும் திருமுறைகளையும் பரப்புவதை நோக்கமாகக் கொண்டு சிங்கப்பூரில் நடைபெறுகிறது.</p>
             </Modal>
 
 
@@ -148,7 +158,7 @@ const Events = () => {
                 onClose={() => setModalType(null)}
                 title="Thirumurai Payirchi Kazhagam"
             >
-                <p>This is a yearly event where students participate in singing and theory tests...</p>
+                <p>This is a yearly event where students participate in singing and theory tests.</p>
                 <p>There are multiple levels to the Payirchi Kazhagam ranging from Level 1 to Level 6.</p>
                 <table className='temple-table'>
                     <thead>
@@ -159,36 +169,15 @@ const Events = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Level 1</td>
-                            <td>Link here</td>
-                            <td>Link here</td>
-                        </tr>
-                        <tr>
-                            <td>Level 2</td>
-                            <td>Link here</td>
-                            <td>Link here</td>
-                        </tr>
-                        <tr>
-                            <td>Level 3</td>
-                            <td>Link here</td>
-                            <td>Link here</td>
-                        </tr>
-                        <tr>
-                            <td>Level 4</td>
-                            <td>Link here</td>
-                            <td>Link here</td>
-                        </tr>
-                        <tr>
-                            <td>Level 5</td>
-                            <td>Link here</td>
-                            <td>Link here</td>
-                        </tr>
-                        <tr>
-                            <td>Level 6</td>
-                            <td>Link here</td>
-                            <td>Link here</td>
-                        </tr>
+                        {thirumuraiPayirchiKazhagamLevels.map((level, index) => (
+                            <tr key={index}>
+                                <td>{level.level}</td>
+                                <td><a href={level.bookletLink} target="_blank" rel="noopener noreferrer">Click here for booklet Link</a></td>
+                                <td><a href={level.songsLink} target="_blank" rel="noopener noreferrer">Click here for songs Link</a></td>
+                            </tr>
+                        ))}
+
+                        
                     </tbody>
                 </table>
 
@@ -199,7 +188,7 @@ const Events = () => {
                 onClose={() => setModalType(null)}
                 title="Thirumurai Drama"
             >
-                <p>This is a where you can find out more about the various nayanmaar dramas that we have hosted thus far.</p>
+                <p>This is a place where you can find out more about the various nayanmaar dramas that we have hosted since 2014!</p>
                 <table className='temple-table'>
                     <thead>
                         <tr>

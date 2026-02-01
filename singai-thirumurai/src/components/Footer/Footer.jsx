@@ -26,28 +26,28 @@ const Footer = () => {
         </div>
       </div>
 
-      <ul>
+      {/* <ul>
         <li onClick={() => setModalType('terms')}>Terms of Service</li>
         <li onClick={() => setModalType('privacy')}>Privacy Policy</li>
-      </ul>
+      </ul> */}
 
       {/* Terms of Service Modal */}
-      <Modal
+      {/* <Modal
         isOpen={modalType === 'terms'}
         onClose={() => setModalType(null)}
         title="Terms of Service"
       >
         <p>Your terms of service content goes here...</p>
-      </Modal>
+      </Modal> */}
 
       {/* Privacy Policy Modal */}
-      <Modal
+      {/* <Modal
         isOpen={modalType === 'privacy'}
         onClose={() => setModalType(null)}
         title="Privacy Policy"
       >
         <p>Your privacy policy content goes here...</p>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

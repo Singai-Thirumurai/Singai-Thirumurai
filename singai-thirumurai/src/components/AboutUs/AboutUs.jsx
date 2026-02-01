@@ -1,13 +1,12 @@
 import React from 'react'
 import './AboutUs.css'
-import about_img from '../../assets/natarajar.jpg'
-// import play_icon from '../../assets/play-icon.png'
+import about_us_img from '../../assets/tmoc.jpg';
 
 const AboutUs = () => {
     return (
         <div className='aboutUs' name='aboutUs'>
             <div className='aboutUs-left'>
-                <img src={about_img} className="aboutUs-img" />
+                <img src={about_us_img} className="aboutUs-img" />
                 {/* <img src={play_icon} className="play-icon" /> */}
             </div>
             <div className='aboutUs-right'>

@@ -11,8 +11,12 @@ import Annoucements from "./components/Announcements/Announcements";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Gallery from "./components/Gallery/Gallery";
+import CampSection from "./components/CampSection/CampSection";
 
 const App = () => {
+
+  const showCampSection = true; // Set to true to show the CampSection, false to hide it
+
   return (
     <div>
       <Navbar />
@@ -22,6 +26,8 @@ const App = () => {
           <Title subTitle='Annoucements' title='Scheduled Events' />
           <Annoucements />
         </div>
+
+        {showCampSection && <CampSection />}
 
         <div id="about">
           <Title subTitle='About Us' title='Singapore Thirumurai Manadu Organising Committee' />
