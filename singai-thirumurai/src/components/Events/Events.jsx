@@ -6,7 +6,7 @@ import event_2 from '../../assets/competition.jpg'
 import event_3 from '../../assets/thevaaram_class_placeholder.jpg'
 import event_4 from '../../assets/thirumurai_drama.jpg'
 import event_5 from '../../assets/youthwing.jpg'
-import event_6 from '../../assets/event_6.jpg'
+import event_6 from '../../assets/thirumurai_payirchi_kazhagam.png'
 
 import program_icon_1 from '../../assets/program-icon-1.png'
 import program_icon_2 from '../../assets/program-icon-2.png'
@@ -40,15 +40,15 @@ const Events = () => {
     ];
 
     const dramaData = [
-        { title: "பித்தா பிறை சூடி நாடகம்", year: 2014, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
-        { title: "திருநீலகண்டம் நாடகம்", year: 2015, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
-        { title: "திலகவதியார் நாடகம்", year: 2016, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
-        { title: "அப்பூதி அடியார் நாடகம்", year: 2017, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
-        { title: "நற்றமிழ் ஞானசம்பந்தர் நாடகம்", year: 2018, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
-        { title: "கண்ணப்ப நாயனார் நாடகம்", year: 2019, link: "https://youtube.com/@sivayanamathirumurai6130?si=u0BKNoCF2IQXdwzN" },
-        { title: "திருமுறை கண்ட புராணம் நாடகம்", year: 2022, link: "https://www.youtube.com/live/ZvNheZuDjdQ?si=5a4vDBOqDMs72pf0" },
-        { title: "காரைக்கால் அம்மையார் நாடகம்", year: 2023, link: "https://www.youtube.com/live/RsEkuNRkkhQ?si=GM9Zd4yFyhsqzJkO" },
-        { title: "மாணிக்கவாசகர் நாடகம்", year: 2024, link: "https://www.youtube.com/live/Jloe3TG2q8Y?si=PvI1crTX99dJHL3l" },
+        { title: "பித்தா பிறை சூடி நாடகம்", year: 2014, link: "https://youtu.be/fRxlomTPgN8?si=ucWtdS5_0q4c7fOX" },
+        { title: "திருநீலகண்டர் நாடகம்", year: 2015, link: "https://youtu.be/qlPswCzkN-c?si=cXn6s33tZJaHt3kH" },
+        { title: "திலகவதியார் நாடகம்", year: 2016, link: "https://youtu.be/He4ZnB4XNzU?si=Z595LobWZaZ69y9d" },
+        { title: "ஒரு நம்பி அப்பூதி நாடகம்", year: 2017, link: "https://youtu.be/gFNG1pFHPKg?si=qymrYxvJqEKIhaIc" },
+        { title: "நற்றமிழ் வல்ல ஞானசம்பந்தர் நாடகம்", year: 2018, link: "https://youtu.be/RwqRzaUmi4k?si=rWf6NtolC3ZoG_38" },
+        { title: "கண்ணப்ப நாயனார் நாடகம்", year: 2019, link: "https://youtu.be/1C3rJqTcgU0?si=i7fkjUlxkLjnCT08" },
+        { title: "திருமுறை கண்ட புராணம் நாடகம்", year: 2022, link: "https://youtu.be/KCtYLR8wfjY?si=x5L2vTQwoyqNznMk" },
+        { title: "காரைக்கால் அம்மையார் நாடகம்", year: 2023, link: "https://youtu.be/yGp1teNqCWo?si=nnVHt38k-bcPB4XO" },
+        { title: "மாணிக்கவாசகர் நாடகம்", year: 2024, link: "https://youtu.be/2gwy3QXXe7M?si=cC6KoW-NBt30d9-8" },
         { title: "சேரமான் பெருமாள் நாடகம்", year: 2025, link: "https://www.youtube.com/live/e6hI7Brp1BE?si=iwY9FM0EDWsWgUq7" }
     ];
 
@@ -221,7 +221,7 @@ const Events = () => {
                 <p><strong>We organise Thirumurai Camps (yearly), take part in Sivarathiri, Navarathri and many other events!</strong></p>
                 <br />
                 <p>Join us on our journey to share the beauty of Tamil devotional music and make a positive impact in our community!
-                    You may contact us via our Instagram page below or contact our email (thirumuraiyouthwing@gmail.com) for more information.</p>
+                    You may contact us via our Instagram page below or contact our email <a href='mailto:thirumuraiyouthwing@gmail.com'>(thirumuraiyouthwing@gmail.com)</a> for more information.</p>
                 <div style={{ textAlign: 'center' }}>
                     <img className="instagram-icon" src={instagram_icon}></img>
                     <a href='https://www.instagram.com/singaithirumurai_sg?utm_source=qr&igsh=MTVzYm1wNWlkYzEzZA==' target='_blank' rel='noopener noreferrer'>Follow us on Instagram!</a>
