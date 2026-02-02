@@ -80,6 +80,32 @@ const Resources = () => {
     ? resources 
     : resources.filter(item => item.category?.toLowerCase() === filter.toLowerCase());
 
+    // Define the order you want the groups to appear in
+  const categoryOrder = {
+    'pdf': 1,
+    'audio': 2,
+    'youtube': 3,
+    'link': 4
+  };
+
+  const getCategoryWeight = (item) => {
+    // Convert category to lowercase to match our list above
+    const cat = item.category?.toLowerCase() || '';
+    
+    // If we recognize the category, return its number. 
+    // If not, return 99 to put it at the end.
+    if (cat.includes('pdf')) return categoryOrder.pdf;
+    if (cat.includes('audio')) return categoryOrder.audio;
+    if (cat.includes('youtube')) return categoryOrder.youtube;
+    return categoryOrder.link; // Default for 'link' or unknown
+  };
+
+  // Sort the filtered list based on the weights
+  const sortedResources = [...filteredResources].sort((a, b) => {
+    return getCategoryWeight(a) - getCategoryWeight(b);
+  });
+
+
   return (
     <div className='resources-section'>
       <div className="filter-tabs">
@@ -91,7 +117,7 @@ const Resources = () => {
       </div>
 
       <div className="resources-grid">
-        {filteredResources.map((item) => (
+        {sortedResources.map((item) => (
           <ResourceCard key={item.id} item={item} />
         ))}
       </div>

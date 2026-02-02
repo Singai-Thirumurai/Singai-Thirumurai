@@ -76,3 +76,68 @@
 .swiper-pagination-bullet-active {
     background: #000F38 !important;
 }
+
+/* Container for the whole section */
+.gallery-section {
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Flex wrapper to hold: [Arrow] [Swiper] [Arrow] */
+.gallery-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center arrows */
+    justify-content: center;
+    gap: 20px; /* Space between arrows and images */
+    position: relative;
+}
+
+/* Ensure Swiper takes up remaining space */
+.swiper.mySwiper {
+    width: 100%;
+    padding-bottom: 40px; /* Space for pagination dots */
+}
+
+/* --- CUSTOM ARROW STYLING --- */
+.arrow {
+    background-color: #000F38; /* Your Brand Dark Blue */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Circle shape */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Prevent shrinking */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: #FAB95B; /* Your Brand Gold */
+    color: #000F38;
+    transform: scale(1.1);
+}
+
+/* Disable default Swiper arrows just in case */
+.swiper-button-next, .swiper-button-prev {
+    display: none !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery-wrapper {
+        gap: 10px;
+    }
+    
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}

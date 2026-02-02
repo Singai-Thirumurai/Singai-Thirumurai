@@ -60,7 +60,7 @@ const Announcements = () => {
           return (
             <div className="news-card" key={item.id}>
               <div className="card-image">
-                <img src={item.imageURL || placeholderImg} alt={item.title} />
+                <img src={item.photo || placeholderImg} alt={item.title} />
                 <div className="date-badge">
                   {/* Extract Day */}
                   <span>{dateObj ? dateObj.getDate() : '--'}</span>
