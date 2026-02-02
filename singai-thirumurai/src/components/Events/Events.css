@@ -160,6 +160,27 @@
     background-color: #f1f1f1;
 }
 
+/* Remove default list styling inside the table */
+.class-schedule-list {
+    list-style-type: none; /* No bullet points */
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Keep text aligned left */
+}
+
+/* Add spacing between multiple classes */
+.class-schedule-list li {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #eee; /* Optional: separates lines nicely */
+}
+
+/* Remove the border from the very last item */
+.class-schedule-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
 /* ---- media -----*/
 
 

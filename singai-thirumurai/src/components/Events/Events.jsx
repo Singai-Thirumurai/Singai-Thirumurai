@@ -21,22 +21,136 @@ const Events = () => {
     const [modalType, setModalType] = useState(null); // 'classes' or 'competitions' or 'manadu' or 'payirchi-kazhagam' or null
 
     const templeData = [
-        { name: "Sri Arasakesari Sivan Temple", zone: "North/West" },
-        { name: "Holy Tree Sri Punithamaram Balasubramaniar Temple", zone: "North" },
-        { name: "Sri Siva Krishna Temple", zone: "North" },
-        { name: "Darma Muneeswaran Temple", zone: "Central/East" },
-        { name: "Sri Sivan Temple", zone: "East" },
-        { name: "Sri Mariamman Temple (Chinatown)", zone: "Central" },
-        { name: "Sri Senpaga Vinayagar Temple", zone: "East" },
-        { name: "Sri Muneeswaran Temple (Queensway)", zone: "West" },
-        { name: "Sri Ruthrakaliamman Temple", zone: "West" },
-        { name: "Sri Veeramakaliamman Temple", zone: "Central" },
-        { name: "Sri Vadapathira Kaliamman Temple", zone: "Central" },
-        { name: "Sri Layan Sithi Vinayagar Temple", zone: "Central" },
-        { name: "Sri Thendayuthapani Temple", zone: "Central" },
-        { name: "Sri Maha Mariamman Temple", zone: "North" },
-        { name: "Sri Velmurugan Gnanamuneeswaran Temple", zone: "North/East" },
-        { name: "Mrs Savithri Karthikeyan c/o Sri Muneeswarar Temple", zone: "West" }
+        {
+            name: "Sri Arasakesari Sivan Temple",
+            details: [
+                "Sundays, 9:00am to 11:00am (Kids & Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/XAPfgAieGHKJfy5w7"
+        },
+        {
+            name: "Holy Tree Sri Balasubramaniar Temple",
+            details: [
+                "Sundays, 10:30am to 12:00pm (Kids & Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/6Pyq9iyQb6Eo21or8"
+        },
+        {
+            name: "Sri Siva Krishna Temple",
+            details: [
+                "Sundays, 10:30am to 11:30am (Kids & Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/ag4arWNtXKjQj1Bo8"
+        },
+        {
+            name: "Darma Muneeswaran Temple",
+            details: [
+                "Sundays, 1:0pm to 4:00pm (Kids & Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/HhBWbC6W9ewoAwVf6"
+        },
+        {
+            name: "Sri Sivan Temple",
+            details: [
+                "Sundays, 8:30am to 9:30am (Adults)",
+                "Sundays, 9:30am to 10:30am (Kids)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/mdDbHBHHq795vgW3A"
+        },
+        {
+            name: "Sri Mariamman Temple (Chinatown)",
+            details: [
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/x9wikV9ftQmmSdMe7"
+        },
+        {
+            name: "Sri Senpaga Vinayagar Temple",
+            details: [
+                "Sundays, 9:00am to 12:00pm (N, K1, K2, P1-6, Sec 1-4 have separate classes)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/3LKJreL4wofY5aeN6"
+        },
+        {
+            name: "Sri Muneeswaran Temple (Queensway)",
+            details: [
+                "Sundays, 4:30pm to 6:00pm (Kids)",
+                "Sundays, 6:00pm to 7:30pm (Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/43XVbpLsQZK1M7rv6"
+        },
+        {
+            name: "Sri Ruthrakaliamman Temple",
+            details: [
+                "Thursdays, 7:00pm to 8:00pm (Kids)",
+                "Saturdays, 7:00pm to 8:00pm (Kids)",
+                "Sundays, 7:00pm to 8:00pm (Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/8VphVeX2KpZWmWT76"
+        },
+        {
+            name: "Sri Veeramakaliamman Temple",
+            details: [
+                "Sundays, 11:30am to 12:30pm (Kids & Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/N4k6MoAUSkZxt2B69"
+        },
+        {
+            name: "Sri Vadapathira Kaliamman Temple",
+            details: [
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/LnXwojc2XLFsrh458"
+        },
+        {
+            name: "Sri Layan Sithi Vinayagar Temple",
+            details: [
+                "Saturdays, 6:00pm to 7:30pm (Kids)",
+                "Sundays, 6:00pm to 7:00pm (Kids)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/y3ZNN626Lxyu4iAEA"
+        },
+        {
+            name: "Sri Thendayuthapani Temple",
+            details: [
+                "Saturdays, 6:00pm to 7:30pm (Kids)",
+                "Sundays, 6:00pm to 7:00pm (Kids)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/BT7pgZU4ErCtX8Xf9"
+        },
+        {
+            name: "Sree Maha Mariamman Temple",
+            details: [
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/GKDYunKT4LvdskqG6"
+        },
+        {
+            name: "Arulmigu Velmurugan Gnanamuneeswaran Temple",
+            details: [
+                "Saturdays, 9:30am to 11:30am (Kids & Adults)",
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/xNjiWrxvLoqFEkh28"
+        },
+        {
+            name: "Mrs Savithri Karthikeyan c/o Sri Muneeswarar Peetam Temple",
+            details: [
+                "Contact us for more details"
+            ],
+            mapLink: "https://maps.app.goo.gl/jz1rVVtgw9zFjs8c8"
+        }
     ];
 
     const dramaData = [
@@ -54,11 +168,11 @@ const Events = () => {
 
     const thirumuraiPayirchiKazhagamLevels = [
         { level: 1, bookletLink: "https://drive.google.com/file/d/1hyF1Il6PVwzdSdUsTpLnLrdlnZP07auY/view?usp=sharing", songsLink: "https://drive.google.com/file/d/11C0rpC4V_68eI8ejRbTuu-8vsWlQy7Go/view?usp=sharing" },
-        { level: 2, bookletLink: "https://drive.google.com/file/d/1xOIhrbeZmxOfD_ns1wXi3gcMwWE1VxWX/view?usp=sharing", songsLink: "https://drive.google.com/file/d/1_8uLyUbLaYsxa8pwtuEbYIr_xsRAz_Cp/view?usp=drive_link"},
-        { level: 3, bookletLink: "https://drive.google.com/file/d/1wLU0aqMjSiS3-kOGnAgfYAK_kVt3Ww67/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1ib5aO1TOp0vKJyU09oIkPeo9xtGnh60s/view?usp=drive_link"},
-        { level: 4, bookletLink: "https://drive.google.com/file/d/168OynFZkybqQZ3kzJyF0KBm97GYPNUNz/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1b6FIy760qNtpe9lpF-S1M4sDKXruszEg/view?usp=drive_link"},
-        { level: 5, bookletLink: "https://drive.google.com/file/d/1L8Kq7sXdZSk9kW1Gk2i2huCfJyar8wCu/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1XPPkALLXYb22ulFJsABMT0tg-kZAZj1X/view?usp=drive_link"},
-        { level: 6, bookletLink: "https://drive.google.com/file/d/1YZpwYOGPe4Xr4XI64C7j4TFjEJTDAAu5/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1_4faDknOi0OPqyRWpnS5bCyki4CtRIZt/view?usp=drive_link"}
+        { level: 2, bookletLink: "https://drive.google.com/file/d/1xOIhrbeZmxOfD_ns1wXi3gcMwWE1VxWX/view?usp=sharing", songsLink: "https://drive.google.com/file/d/1_8uLyUbLaYsxa8pwtuEbYIr_xsRAz_Cp/view?usp=drive_link" },
+        { level: 3, bookletLink: "https://drive.google.com/file/d/1wLU0aqMjSiS3-kOGnAgfYAK_kVt3Ww67/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1ib5aO1TOp0vKJyU09oIkPeo9xtGnh60s/view?usp=drive_link" },
+        { level: 4, bookletLink: "https://drive.google.com/file/d/168OynFZkybqQZ3kzJyF0KBm97GYPNUNz/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1b6FIy760qNtpe9lpF-S1M4sDKXruszEg/view?usp=drive_link" },
+        { level: 5, bookletLink: "https://drive.google.com/file/d/1L8Kq7sXdZSk9kW1Gk2i2huCfJyar8wCu/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1XPPkALLXYb22ulFJsABMT0tg-kZAZj1X/view?usp=drive_link" },
+        { level: 6, bookletLink: "https://drive.google.com/file/d/1YZpwYOGPe4Xr4XI64C7j4TFjEJTDAAu5/view?usp=drive_link", songsLink: "https://drive.google.com/file/d/1_4faDknOi0OPqyRWpnS5bCyki4CtRIZt/view?usp=drive_link" }
     ];
 
     return (
@@ -142,11 +256,28 @@ const Events = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {templeData.sort((a, b) => a.zone.localeCompare(b.zone)).map((temple, index) => (
+                        {templeData.sort((a, b) => a.name.localeCompare(b.name)).map((temple, index) => (
                             <tr key={index}>
-                                <td>{temple.name}</td>
-                                <td>{temple.zone}</td>
-                                <td>Contact for Schedule</td> {/* Placeholder for contact info */}
+                                <td style={{ fontWeight: 'bold' }}>{temple.name}</td>
+
+                                <td>
+                                    <ul className="class-schedule-list">
+                                        {temple.details.map((classTime, i) => (
+                                            <li key={i}>{classTime}</li>
+                                        ))}
+                                    </ul>
+                                </td>
+
+                                <td>
+                                    <a
+                                        href={temple.mapLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="map-btn"
+                                    >
+                                        View Map
+                                    </a>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
@@ -177,7 +308,7 @@ const Events = () => {
                             </tr>
                         ))}
 
-                        
+
                     </tbody>
                 </table>
 
