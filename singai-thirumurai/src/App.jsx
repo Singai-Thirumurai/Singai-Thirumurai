@@ -23,7 +23,7 @@ const App = () => {
       <Hero />
       <div className="container">
         <div id="announcements">
-          <Title subTitle='Annoucements' title='Scheduled Events' />
+          <Title subTitle='Announcements' title='Scheduled Events' />
           <Annoucements />
         </div>
 
