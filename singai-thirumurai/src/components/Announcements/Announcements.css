@@ -133,3 +133,31 @@
     color: #888;
     font-weight: 600;
 }
+
+/* Container to center the button below the grid */
+.load-more-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Style the button to match your theme */
+.load-more-btn {
+    background-color: transparent;
+    color: #000F38; /* Brand Dark Blue */
+    border: 2px solid #000F38;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px; /* Pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #000F38;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 15, 56, 0.2);
+    transform: translateY(-2px);
+}

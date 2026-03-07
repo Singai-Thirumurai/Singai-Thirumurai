@@ -9,6 +9,8 @@ const Announcements = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState('all');
 
+  const [visibleCount, setVisibleCount] = useState(4); // Number of items to show initially
+
   const getCategoryName = (key) => {
     if (key === 'event') return 'Upcoming Events';
     if (key === 'announcement') return 'Announcements';
@@ -37,23 +39,39 @@ const Announcements = () => {
     ? data 
     : data.filter(item => item.type === filter);
 
+  const sortedData = [...filteredData].sort((a, b) => {
+    if (!a.date || !b.date) return 0; // Handle missing dates
+
+    const dateA = a.date.toDate ? a.date.toDate() : new Date(a.date);
+    const dateB = b.date.toDate ? b.date.toDate() : new Date(b.date);
+
+    return dateA - dateB; // Sort in ascending order (soonest first)
+  });
+
+  const displayedData = sortedData.slice(0, visibleCount); // Show only the number of items based on visibleCount
+
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+    setVisibleCount(4); // Reset visible count when filter changes
+  };
+
   return (
     <div className='announcements-section'>
 
       <NewsTicker />
 
       <div className="filter-tabs">
-        <button className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>All Updates</button>
-        <button className={filter === 'event' ? 'active' : ''} onClick={() => setFilter('event')}>Upcoming Events</button>
-        <button className={filter === 'announcement' ? 'active' : ''} onClick={() => setFilter('announcement')}>Announcements</button>
-        <button className={filter === 'competition' ? 'active' : ''} onClick={() => setFilter('competition')}>Competitions</button>
+        <button className={filter === 'all' ? 'active' : ''} onClick={() => handleFilterChange('all')}>All Updates</button>
+        <button className={filter === 'event' ? 'active' : ''} onClick={() => handleFilterChange('event')}>Upcoming Events</button>
+        <button className={filter === 'announcement' ? 'active' : ''} onClick={() => handleFilterChange('announcement')}>Announcements</button>
+        <button className={filter === 'competition' ? 'active' : ''} onClick={() => handleFilterChange('competition')}>Competitions</button>
       </div>
 
       <div className="news-grid">
         
-        {filteredData.length === 0 ? ( 
+        {displayedData.length === 0 ? ( 
           <div className='empty-state'><p>There are no new {getCategoryName(filter)} at the moment.</p></div> ) : 
-          (filteredData.map((item) => {
+          (displayedData.map((item) => {
 
           const dateObj = item.date && item.date.toDate ? item.date.toDate() : new Date(item.date);
           
@@ -82,6 +100,18 @@ const Announcements = () => {
           );
         }))}
       </div>
+
+      {visibleCount < sortedData.length && (
+        <div className="load-more-container">
+          <button 
+            className="load-more-btn" 
+            onClick={() => setVisibleCount(prev => prev + 4)}
+          >
+            Load More {getCategoryName(filter)}
+          </button>
+        </div>
+      )}
+
     </div>
   );
 };
